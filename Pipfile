@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+fastapi = "*"
+uvicorn = {extras = ["standard"], version = "*"}
+pymysql = "*"
+sqlalchemy = "*"
+cryptography= "*"
+
+[dev-packages]
+pytest = "*"
+testcontainers = "*"
+
+[requires]
+python_version = "3.8"
