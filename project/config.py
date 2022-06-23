@@ -12,10 +12,10 @@ class AppSettings(BaseSettings):
 
     # Database
     DATABASE_DIALECT: str = "mysql+pymysql"
-    DATABASE_HOST: str = "127.0.0.1"
+    DATABASE_HOST: str = "localhost"
     DATABASE_PORT: int = 3306
     DATABASE_USER: str = "master"
-    DATABASE_PASSWORD: str = "master_pass"
+    DATABASE_PASSWORD: str = "pass"
     DATABASE_NAME: str = "rule_of_thumb_mysql"
 
     class Config:
