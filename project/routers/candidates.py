@@ -55,7 +55,7 @@ def update_candidate(candidate_id: int, request: UpgradeCandidateRequest, db: Se
 
 @router.delete('/{candidate_id}', status_code=status.HTTP_202_ACCEPTED)
 def delete_candidate(candidate_id: int, db: Session = Depends(get_db)):
-    """Create a new candidate."""
+    """Delete a candidate."""
     candidate = repositories.candidates.get_by_id(db, candidate_id=candidate_id)
     if candidate:
         repositories.candidates.delete(db, candidate=candidate)
