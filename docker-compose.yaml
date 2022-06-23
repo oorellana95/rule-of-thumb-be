@@ -10,6 +10,7 @@ services:
     environment:
       - DOMAIN_FRONTEND=http://localhost:8080
       - DATABASE_HOST=mysql
+      - DATABASE_PORT=3306
       - DATABASE_USER=master
       - DATABASE_PASSWORD=pass
       - DATABASE_NAME=rule_of_thumb_mysql
@@ -28,6 +29,8 @@ services:
       - MYSQL_PASSWORD=pass
     volumes:
       - todo-mysql-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
     restart: unless-stopped
 
 volumes:
