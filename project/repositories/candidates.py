@@ -29,8 +29,7 @@ def get_by_filter(db: Session, candidate_filter: CandidatesFilterDto) \
         Candidate.id,
         Candidate.name,
         Candidate.description,
-        Candidate.category,
-        Candidate.picture)
+        Candidate.category)
 
     query = add_candidates_filter(query, candidate_filter)
     return query.all()

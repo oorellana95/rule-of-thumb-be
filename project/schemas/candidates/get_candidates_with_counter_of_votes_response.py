@@ -1,5 +1,4 @@
 """GetCandidatesWithCounterOfVotesResponse Schema."""
-from typing import Optional
 from pydantic import BaseModel
 from project.enums import Categories
 
@@ -9,7 +8,6 @@ class GetCandidatesWithCounterOfVotesResponse(BaseModel):
     name: str
     description: str
     category: Categories
-    picture: Optional[str]
     positive_votes: int
     positive_votes_pct: float
     negative_votes: int

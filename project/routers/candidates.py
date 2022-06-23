@@ -32,8 +32,7 @@ def create_candidate(request: UpgradeCandidateRequest, db: Session = Depends(get
     """Create a new candidate."""
     candidate = Candidate(name=request.name,
                           description=request.description,
-                          category=request.category,
-                          picture=request.picture)
+                          category=request.category)
 
     return repositories.candidates.create(db, candidate=candidate)
 
@@ -46,7 +45,6 @@ def update_candidate(candidate_id: int, request: UpgradeCandidateRequest, db: Se
         candidate.name = request.name
         candidate.description = request.description
         candidate.category = request.category
-        candidate.picture = request.picture
         repositories.candidates.update(db, candidate=candidate)
         return candidate
     else:

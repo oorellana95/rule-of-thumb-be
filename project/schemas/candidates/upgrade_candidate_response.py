@@ -9,7 +9,6 @@ class UpgradeCandidateResponse(BaseModel):
     name: str
     description: str
     category: enums.Categories
-    picture: Optional[str]
 
     class Config:
         orm_mode = True

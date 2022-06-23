@@ -29,6 +29,5 @@ def test_given_candidate_it_should_update_fields_and_return_valid_response(app_t
         'id': '1',
         'name': 'Warren Buffet',
         'description': 'Warren Edward Buffett is an American business magnate, investor, and philanthropist. He is currently the chairman and CEO of Berkshire Hathaway.',
-        'category': 'business',
-        'picture': None
+        'category': 'business'
     }
