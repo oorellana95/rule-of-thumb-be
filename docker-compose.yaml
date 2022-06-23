@@ -9,9 +9,9 @@ services:
     image: rule-of-thumb-backend
     environment:
       - DOMAIN_FRONTEND=http://localhost:8080
-      - DATABASE_HOST=127.0.0.1
+      - DATABASE_HOST=mysql
       - DATABASE_USER=master
-      - DATABASE_PASSWORD=master_pass
+      - DATABASE_PASSWORD=pass
       - DATABASE_NAME=rule_of_thumb_mysql
     volumes:
       - ./:/project
@@ -28,8 +28,6 @@ services:
       - MYSQL_PASSWORD=pass
     volumes:
       - todo-mysql-data:/var/lib/mysql
-    ports:
-      - "3306:3306"
     restart: unless-stopped
 
 volumes:
