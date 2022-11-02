@@ -3,7 +3,6 @@ WORKDIR /code
 COPY Pipfile* /code/
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir pipenv
-RUN pipenv check
 RUN pipenv install --system --deploy
 COPY ./project /code/project
 ENTRYPOINT ["uvicorn", "project.main:app", "--host", "0.0.0.0", "--port", "8000"]
